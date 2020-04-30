@@ -33,7 +33,7 @@ Briqup is connecting construcion owners with building material distributors. Use
 
 ## Wireframe
 
-<img src="/main_app/static/images/wireframe.jpg" width="400" height="600">
+<img src="./public/images/IMG_8862.HEIC" width="400" height="600">
 
 ## Data Models
 - User
