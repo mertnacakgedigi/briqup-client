@@ -9,7 +9,7 @@
 - [Milestones](#milestones)
 
 ## Scope
-Briqup is connecting construcion owners with building material distributors. Users are able to create a request for quotation and suppliers are able to offer for these requests. An example model would be https://rfq.alibaba.com/rfq.html?spm=a2700.8293689.rfq.dbanner.6bf067afMzV77Y&tracelog=from_pc_home_banner. 
+Briqup is connecting construction owners with building material distributors. Users are able to create a request for quotation and suppliers are able to offer for these requests. An example model would be https://rfq.alibaba.com/rfq.html?spm=a2700.8293689.rfq.dbanner.6bf067afMzV77Y&tracelog=from_pc_home_banner. 
 
 ##### Technologies in play
 - React
