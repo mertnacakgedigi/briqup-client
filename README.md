@@ -47,9 +47,11 @@ Briqup is connecting construction owners with building material distributors. Us
     - name
     - Destination
     - Category
+    - Quantity
     - Date
     - Detail
     - Associated to User
+   
 - Offer
     - price
     - detail
