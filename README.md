@@ -80,4 +80,8 @@ Briqup is connecting construction owners with building material distributors. Us
 - Create a component for offer
 - Display offers for quotes
 - Deploy to Heroku
+#### Bonus
+##### May 11
+- Set up basic a message center for users
+- Send email notifications to users if their requests get any offer
 
