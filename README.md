@@ -1,4 +1,4 @@
-# Tripper
+# Briqup
 
 ## Index:
 
