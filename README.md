@@ -71,15 +71,17 @@ Briqup is connecting construction owners with building material distributors. Us
 - Set up authentication and authorization
 - Set up routes
 #### Sprint 3
-##### May 7
+##### May 9
 - Set up basic CRUD functionality for the request, be able to add, update and delete
 - Create a component for a form for request
-#### Sprint 4
-##### May 11
 - Set up basic CRUD functionality for the quote, be able to add, update and delete
 - Create a component for offer
 - Display offers for quotes
+
+#### Sprint 4
+##### May 10
 - Deploy to Heroku
+- Bug Fixing
 #### Bonus
 ##### May 11
 - Set up basic a message center for users
