@@ -25,7 +25,7 @@ Briqup is connecting construction owners with building material distributors. Us
 - User Story 1: 
     - A user create a new requst. The user clicks on the “Submit RFQ” button on the home page. They are taken to a form which allows them to create a new request. They enter the location, dates, and detail of their request and then submit it. The page redirects the user to a page displaying their new request. 
 - User Story 2: 
-    - A user wants to qutoe for offers. They go to a list of all requests. They click on the request they want to offer. They are taken to a form which allows them to create new a quote with detail. When they submit, it will display inside of quotes for specific request.
+    - A user wants to give an offer for requests. They go to a list of all requests. They click on the request they want to offer. They are taken to a form which allows them to create new a quote with detail. When they submit, it will display inside of quotes for specific request.
 - User Story 3: 
     - A user modifies their request. They click on their profile. They see a list of their requests. They click on a request and are redirected to the detail page for that request. They click on an edit button. They modify the request and then click submit. The new information is saved. They are redirected to the detail page for their request, which now displays the updated information. 
 
