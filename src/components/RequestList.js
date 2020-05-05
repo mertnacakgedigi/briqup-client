@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Link , NavLink, Route} from 'react-router-dom'
+import {Link } from 'react-router-dom'
 import RequestModel from '../models/request'
 import Table from 'react-bootstrap/Table'
+import Button from 'react-bootstrap/Button'
 
 
 class RequestList extends Component {
@@ -27,8 +28,8 @@ class RequestList extends Component {
     render() {
         return (
                     <>
-
-                    <h1>Request List</h1>
+            
+                    <h1 style={{  textAlign : "center" }}>Request List</h1>
                     <Table striped bordered hover>
                         <thead>
                             <tr>
@@ -37,24 +38,25 @@ class RequestList extends Component {
                             <th>Category</th>
                             <th>Destination</th>
                             <th>Quantity</th>
+                            <th></th>
                             </tr>
                         </thead>
                         <tbody>
                         {
                         this.state.isLoaded ?
-                        <>{this.state.requestList.map(function (request, index) {
+                        <>{this.state.requestList.map(function (request) {      
 
-
-                        //  <Link to={{pathname: `/requests/${this.state.requestList[index]._id}`}} >
-                        return <tr>
-                                <td>{request.name}</td>
+                        return   <tr> 
+                                <td >{request.name}</td>
                                 <td>{request.category}</td>
                                 <td>{request.destination}</td>
                                 <td>{request.quantity}</td>
+                                 <td  style={{  textAlign : "center" }}>
+                                    <Link to={{pathname: `/requests/${request._id}`}} ><Button size="sm" variant="outline-dark">Quote Now</Button></Link>
+                                </td>  
+                               
                                </tr>
-                        // </Link>
-
-
+                            
                         }, this)}</>
                         :
                         <p>Not Loaded</p>

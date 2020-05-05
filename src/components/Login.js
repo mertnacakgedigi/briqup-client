@@ -27,29 +27,7 @@ function Login(props) {
             [e.target.name] : e.target.value
         })
     }
-//   state = {
-//     email: '',
-//     password: '',
-//   }
 
-//   handleChange = (event) => {
-//     this.setState({
-//       [event.target.name]: event.target.value,
-//     })
-//   }
-
-//   handleSubmit = (event) => {
-//     event.preventDefault()
-//     UserModel.login(this.state)
-//       .then((res) => {
-//         this.props.setCurrentUser(res.data.data)
-//         this.props.history.push('/profile')
-//       })
-//       .catch((err) => console.log(err))
-//   }
-
- 
-    // console.log('Hello From Render', this.state.address && this.state.address.street);
     return (
       <div className="container mt-4">
         <div className="row">

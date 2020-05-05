@@ -7,4 +7,9 @@ export default class RequestModel {
         let request = axios.get(`${REACT_APP_API_URL}/request`)
         return request
     }
+
+    static create(data) {
+        let request = axios.post(`${REACT_APP_API_URL}/request`, data)
+        return request
+      }
 }
