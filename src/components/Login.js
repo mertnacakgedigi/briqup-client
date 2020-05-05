@@ -1,43 +1,68 @@
-import React, { Component } from 'react'
+
 import UserModel from '../models/user'
+import React, {useState, setState} from "react";
 
-class Login extends Component {
-  state = {
-    email: '',
-    password: '',
-  }
+function Login(props) {
 
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
+    const [form,setUserData] = useState({
+        email : "",
+        password : ""
     })
-  }
 
-  handleSubmit = (event) => {
-    event.preventDefault()
-    UserModel.login(this.state)
-      .then((res) => {
-        this.props.setCurrentUser(res.data.data)
-        this.props.history.push('/profile')
-      })
-      .catch((err) => console.log(err))
-  }
+    const onSubmit = e => {
+       e.preventDefault();
+       UserModel.login(form)
+       .then((res)=> {
+           props.setCurrentUser(res.data.data)
+           props.history.push('/profile')
+       })
+       .catch((err)=>{
+           console.log(err)
+       })
+    }
 
-  render() {
+    const updateForm = e => {
+        setUserData({
+            ...form,
+            [e.target.name] : e.target.value
+        })
+    }
+//   state = {
+//     email: '',
+//     password: '',
+//   }
+
+//   handleChange = (event) => {
+//     this.setState({
+//       [event.target.name]: event.target.value,
+//     })
+//   }
+
+//   handleSubmit = (event) => {
+//     event.preventDefault()
+//     UserModel.login(this.state)
+//       .then((res) => {
+//         this.props.setCurrentUser(res.data.data)
+//         this.props.history.push('/profile')
+//       })
+//       .catch((err) => console.log(err))
+//   }
+
+ 
     // console.log('Hello From Render', this.state.address && this.state.address.street);
     return (
       <div className="container mt-4">
         <div className="row">
           <div className="col-md-4 offset-md-4">
             <h4 className="mb-3">Login</h4>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={onSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Email</label>
-                <input onChange={this.handleChange} className="form-control form-control-lg" type="email" id="email" name="email" value={this.state.email} />
+                <input  onChange={updateForm} className="form-control form-control-lg" type="email" id="email" name="email" value={form.username} />
               </div>
               <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <input onChange={this.handleChange} className="form-control form-control-lg" type="password" id="password" name="password" value={this.state.password} />
+                <input onChange={updateForm} className="form-control form-control-lg" type="password" id="password" name="password" value={form.password} />
               </div>
               <button className="btn btn-primary float-right" type="submit">Login</button>
             </form>
@@ -45,7 +70,7 @@ class Login extends Component {
         </div>
       </div>
     )
-  }
+  
 }
 
 export default Login

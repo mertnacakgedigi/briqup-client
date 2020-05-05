@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import RequestList from './RequestList'
 
-const Home = () => {
-  return (
-    <div className="container">
-      <h1>Home</h1>
-    </div>
-  );
+class Home extends Component {
+    
+    render(props) {
+      
+        
+        return (
+           <>
+           <RequestList requestList = {this.props.requestList}/>
+           </>
+        );
+    }
 }
 
 export default Home;

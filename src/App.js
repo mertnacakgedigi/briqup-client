@@ -3,10 +3,12 @@ import { withRouter } from 'react-router-dom'
 import Routes from './config/routes'
 import Navbar from './components/Navbar'
 import UserModel from './models/user'
+import RequestModel from './models/request'
 
 class App extends Component {
   state = {
-    currentUser: localStorage.getItem('uid')
+    currentUser: localStorage.getItem('uid'),
+    requestList : []
   }
 
   setCurrentUser = (userId) => {
@@ -26,6 +28,18 @@ class App extends Component {
       })
       .catch(err => console.log(err))
   }
+
+  async indexRequest(){
+    let response = await RequestModel.index();
+    this.setState({
+      requestList : response.data
+    })
+    // console.log(response.data)
+  }
+
+  componentDidMount(){
+    this.indexRequest()
+  }
   
   render() {
     return (
@@ -38,6 +52,7 @@ class App extends Component {
           <Routes 
             currentUser={this.state.currentUser} 
             setCurrentUser={this.setCurrentUser} 
+            requestList = {this.state.requestList}
           />
         </div>
       </>

@@ -8,7 +8,14 @@ import Register from '../components/Register'
 
 export default (props) => (
   <Switch>
-    <Route exact path="/" component={ Home } />
+    <Route exact path="/" render={ (routeProps) => {
+      // An example of adding props to a component rendered by react router
+      return <Home
+                { ...routeProps }
+                requestList={props.requestList}
+              
+              /> 
+    } } />
     <Route path="/profile" component={ Profile } />
     <Route path="/login" render={ (routeProps) => {
       // An example of adding props to a component rendered by react router

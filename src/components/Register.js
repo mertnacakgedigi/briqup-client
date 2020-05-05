@@ -45,7 +45,7 @@ class Register extends Component {
             <h4 className="mb-3">Register</h4>
             <form onSubmit={this.handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name">Company</label>
+                <label htmlFor="name">Company Name</label>
                 <input 
                     onChange={this.handleChange} 
                     className="form-control form-control-lg" 
