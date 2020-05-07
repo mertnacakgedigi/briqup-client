@@ -52,7 +52,7 @@ class RequestList extends Component {
                                 <td>{request.destination}</td>
                                 <td>{request.quantity}</td>
                                  <td  style={{  textAlign : "center" }}>
-                                    <Link to={{pathname: `/requests/${request._id}`}} ><Button size="sm" variant="outline-dark">Quote Now</Button></Link>
+                                    <Link to={{pathname: `/request/${request._id}`}} ><Button size="sm" variant="outline-dark">Quote Now</Button></Link>
                                 </td>  
                                
                                </tr>

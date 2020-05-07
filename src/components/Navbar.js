@@ -18,7 +18,7 @@ const Navbar = (props) => {
               { props.currentUser ? 
                 <>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/profile">Profile</NavLink>
+                    <NavLink className="nav-link" to={{pathname: `/profile/${props.currentUser}`}}>Profile</NavLink>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="/logout" onClick={ props.logout }>Logout</a>

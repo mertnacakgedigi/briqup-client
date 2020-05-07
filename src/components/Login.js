@@ -14,7 +14,7 @@ function Login(props) {
        UserModel.login(form)
        .then((res)=> {
            props.setCurrentUser(res.data.data)
-           props.history.push('/profile')
+           props.history.push('/')
        })
        .catch((err)=>{
            console.log(err)

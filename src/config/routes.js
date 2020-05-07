@@ -6,6 +6,7 @@ import Profile from '../components/Profile'
 import Login from '../components/Login'
 import Register from '../components/Register'
 import CreateRequest from '../components/CreateRequest'
+import Offer from '../components/Offer'
 
 export default (props) => (
   <Switch>
@@ -18,7 +19,7 @@ export default (props) => (
               /> 
     } } />
 
-    <Route path="/request" render={ (routeProps) => {
+    <Route exact path="/request" render={ (routeProps) => {
       // An example of adding props to a component rendered by react router
       return <CreateRequest 
                 { ...routeProps }
@@ -28,7 +29,16 @@ export default (props) => (
               /> 
     } } />
   
-    <Route path="/profile" render={ (routeProps) => {
+    <Route exact path="/profile" render={ (routeProps) => {
+      // An example of adding props to a component rendered by react router
+      return <Profile 
+                { ...routeProps }
+                currentUser={props.currentUser}
+                setCurrentUser={props.setCurrentUser}
+              /> 
+    } } />
+
+    <Route path="/profile/:id" render={ (routeProps) => {
       // An example of adding props to a component rendered by react router
       return <Profile 
                 { ...routeProps }
@@ -45,5 +55,6 @@ export default (props) => (
               /> 
     } } />
     <Route path="/register" component={ Register } />
+    <Route path ='/request/:id' component = {Offer} />
   </Switch>
 )

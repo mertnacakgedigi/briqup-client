@@ -9,8 +9,11 @@ class Home extends Component {
       
         
         return (
-           <>
-            <Link to={{pathname: `/request`}} ><Button style={{ textAlign : "center" }} size="sm" variant="outline-dark">Submit RFQ</Button></Link>
+           <> 
+           <div  style={{ textAlign : "center" }}>
+                 <Link to={{pathname: `/request`}} ><Button size="lg" variant="outline-dark">Submit RFQ</Button></Link>
+           </div>
+         
            <RequestList requestList = {this.props.requestList}/>
            </>
         );
