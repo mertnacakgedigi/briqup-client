@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card'
 import RequestModel from "../models/request"
 import {Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
+import Table from 'react-bootstrap/Table'
 
 class Offer extends Component {
 
@@ -10,7 +11,8 @@ class Offer extends Component {
         super(props);
         this.state = {
             requestId : "",
-            request : null
+            request : null,
+            isLoaded : false,
         }
 
         const requestId = this.props.match.params
@@ -24,17 +26,19 @@ class Offer extends Component {
 
  
     componentDidMount(){
-
+            this.setState({isLoaded : true})
     }
 
     render() {
        let request = this.state.request
        console.log(request)
+    //    let postDate = Intl.DateTimeFormat('en-US').format(new Date(request.offer.createdAt))
     
     //    {{request} ? (<p>some request</p>):(<p> no request </p>)}
        
         return (
         <>{request ? 
+            <>
          <div>
          
             <Card className = "text-left"
@@ -58,8 +62,50 @@ class Offer extends Component {
                 </Card.Body>
                 </Card>
         </div> 
+        <div>
+
+            <Card
+             style={{ width: '90%', marginTop : "10px" }} >
+                <Card.Header>Quotes Record ({request.offer.length}) </Card.Header>
+                <Card.Body>
+                <Table striped bordered hover>
+                        <thead>
+                            <tr>
+
+                            <th>Company</th>
+                            <th>Business Type</th>
+                            <th>Location</th>
+                            <th>Time Quoted </th>
+                     
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {
+                        this.state.isLoaded ?
+                        <>{request.offer.map(function (request) {      
+
+                        return   <tr> 
+                                <td >{request.user.company}</td>
+                                <td >{request.user.type}</td>
+                                <td>{request.destination}</td>
+                                <td>{Intl.DateTimeFormat('en-US').format(new Date(request.createdAt))}</td>
+            
+                               </tr>
+                            
+                        }, this)}</>
+                        :
+                        <p>Not Loaded</p>
+                        }
+
+                        </tbody>
+                    </Table>
+                </Card.Body>
+            </Card>
+        </div>
 
 
+        
+           </>
         
         
         
