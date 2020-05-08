@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const REACT_APP_API_URL = "http://localhost:3001/api/v1"
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL  || "http://localhost:3001/api/v1"
 
 export default class RequestModel {
     static index() {
