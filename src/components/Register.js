@@ -4,8 +4,9 @@ import UserModel from '../models/user'
 class Register extends Component {
   state = {
     // store the default values for the fields in the register form
-    name: '',
+    company: '',
     email: '',
+    type : '',
     password: '',
     password2: ''
   }
@@ -45,7 +46,7 @@ class Register extends Component {
             <h4 className="mb-3">Register</h4>
             <form onSubmit={this.handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name">Company</label>
+                <label htmlFor="name">Company Name</label>
                 <input 
                     onChange={this.handleChange} 
                     className="form-control form-control-lg" 
@@ -54,6 +55,10 @@ class Register extends Component {
                     name="company" 
                     value={this.state.company}
                 />
+              </div>
+              <div className="form-group">
+                <label htmlFor="name">Business Type</label>
+                <input onChange={this.handleChange} className="form-control form-control-lg" type="text" id="email" name="type" value={this.state.type} />
               </div>
               <div className="form-group">
                 <label htmlFor="name">Email</label>
