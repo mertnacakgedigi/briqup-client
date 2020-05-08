@@ -48,12 +48,12 @@ class Offer extends Component {
                 text={'dark'}
                 style={{ width: '80%', marginTop : "10px" }}
                 >
-                <Card.Header> {request.name}</Card.Header>
+                
                 <Card.Body>
-                    <Card.Title>  {request.category} </Card.Title>
+                    <Card.Title>  {request.name} </Card.Title>
                     <Card.Text>
                       Quantity :  {request.quantity} <br/>
-                      {request.detail}
+                      Detail : {request.detail} <br/>
                     </Card.Text>
                     <Card.Text className = "text-right" >
                         
