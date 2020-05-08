@@ -8,7 +8,9 @@ class CreateOffer extends Component {
         price : null,
         user : this.props.currentUser,
         eta : null,
-        destination : null
+        destination : null,
+        detail : null,
+        request : this.props.match.params.id
     }
 
     updateForm = (event) => {
@@ -52,6 +54,10 @@ class CreateOffer extends Component {
                     <div className="form-group">
                       <label htmlFor="Destination">Destination</label>
                       <input onChange={this.updateForm} className="form-control form-control-lg" type="category" id="category" name="destination" value={this.state.destination} />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="Destination">Detail</label>
+                      <input onChange={this.updateForm} className="form-control form-control-lg" type="text"  name="detail" value={this.state.detail} />
                     </div>
 
 

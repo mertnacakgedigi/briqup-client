@@ -3,6 +3,7 @@ import ProfileModel from '../models/profile'
 import Card from 'react-bootstrap/Card'
 import logo from "../docs/profile.jpg"
 import OfferShow from './OfferShow'
+import RequestShow from './RequestShow'
 
 class Profile extends Component {
 
@@ -39,6 +40,7 @@ class Profile extends Component {
       </Card> 
 
       <OfferShow offers = {this.state.user.offers} />
+      <RequestShow requests = {this.state.user.requests} />
     
     
     </>
