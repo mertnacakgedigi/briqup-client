@@ -17,6 +17,7 @@ class RequestList extends Component {
     componentDidMount() {
        RequestModel.index()
        .then((res) => {
+           console.log(res.data)
           
            this.setState({
                requestList: res.data,
