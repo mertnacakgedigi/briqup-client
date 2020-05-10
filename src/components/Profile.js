@@ -41,12 +41,9 @@ class Profile extends Component {
 
       <OfferShow offers = {this.state.user.offers} />
       <RequestShow requests = {this.state.user.requests} />
-    
-    
+      
     </>
-    
-    
- 
+  
     :  
     
       <p>Not Loadded</p>

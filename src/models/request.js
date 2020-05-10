@@ -17,4 +17,9 @@ export default class RequestModel {
         let request = axios.get(`${REACT_APP_API_URL}/request/${data}`)
         return request
     }
+
+    static update(data,id) {
+        let request = axios.post(`${REACT_APP_API_URL}/request/${id}`,data)
+        return request
+    }
 }
