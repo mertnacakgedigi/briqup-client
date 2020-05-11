@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom'
+import logo from "../docs/briqup.png"
 
 const Navbar = (props) => {
     return (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <div className="container">
-          <Link className="navbar-brand"  to="/">Briqup</Link>
+          <Link className="navbar-brand"  to="/"><img style = {{ width : "120px", height :"45px"}}  src={logo} alt="hey"></img></Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

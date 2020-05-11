@@ -30,8 +30,8 @@ class RequestList extends Component {
         return (
                     <>
             
-                    <h1 style={{  textAlign : "center" }}>Request List</h1>
-                    <Table striped bordered hover>
+                    <h1 style={{  textAlign : "center", fontSize:"50px", marginTop: "3px" }}>Request List</h1>
+                    <Table style={{   marginTop: "0px" }} striped bordered hover>
                         <thead>
                             <tr>
 

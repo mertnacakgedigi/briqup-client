@@ -50,10 +50,12 @@ class Offer extends Component {
                 >
                 
                 <Card.Body>
-                    <Card.Title>  {request.name} </Card.Title>
+                    <Card.Title style={{fontSize:"30px"}}>  {request.name} </Card.Title>
                     <Card.Text>
+                      Category : {request.category} <br/>
                       Quantity :  {request.quantity} <br/>
                       Detail : {request.detail} <br/>
+
                     </Card.Text>
                     <Card.Text className = "text-right" >
                         
@@ -76,6 +78,7 @@ class Offer extends Component {
                             <th>Business Type</th>
                             <th>Location</th>
                             <th>Time Quoted </th>
+                            <th>Offered Price</th>
                      
                             </tr>
                         </thead>
@@ -89,6 +92,7 @@ class Offer extends Component {
                                 <td >{request.user.type}</td>
                                 <td>{request.destination}</td>
                                 <td>{Intl.DateTimeFormat('en-US').format(new Date(request.createdAt))}</td>
+                                <td>${request.price}</td>
             
                                </tr>
                             

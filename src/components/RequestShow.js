@@ -27,14 +27,14 @@ class RequestShow extends Component {
         console.log(this.props.requests)
         const requestList = this.props.requests.map((request,index) => 
         <tr style={{ textAlign : 'center' }}> 
-            <td>{index+1}</td>
+            <Link to={{pathname: `/request/${request._id}`}} ><td>{index+1}</td></Link>
             <td >{request.name}</td>  
             <td >{request.destination}</td>     
             <td >{request.category}</td>
             <td >{request.quantity}</td>
             <td>{Intl.DateTimeFormat('en-US').format(new Date(request.createdAt))}</td> 
             <td><Link to={{pathname: `/request/${request._id}/update`}} ><Button size="sm" variant="outline-dark">Edit</Button></Link>
-            <Button onClick={()=> this.deleteRequest(request._id)} style={{marginLeft : "5px"}}size="sm" variant="outline-dark">Delete</Button></td>
+            <Button onClick={()=> this.deleteRequest(request._id)} style={{marginLeft : "5px"}}size="sm" variant="outline-dark">Delete</Button></td> 
             
             
     
