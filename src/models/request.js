@@ -22,4 +22,8 @@ export default class RequestModel {
         let request = axios.post(`${REACT_APP_API_URL}/request/${id}`,data)
         return request
     }
+    static delete(id) {
+        let request = axios.delete(`${REACT_APP_API_URL}/request/${id}`)
+        return request 
+    }
 }

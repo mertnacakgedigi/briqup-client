@@ -11,7 +11,7 @@ class UpdateRequest extends Component {
         quantity :  null,
         detail : null,
         destination : null,
-        user :  this.props.currentUserm,
+        user :  this.props.currentUser,
         requestId : null,
     }
 
@@ -34,7 +34,7 @@ class UpdateRequest extends Component {
     onSubmit = e => { 
       e.preventDefault();
       RequestModel.update(this.state,this.state.requestId.id)
-        .then((res)=> {console.log(res)})
+        .then((res)=> {this.props.history.push(`/profile/${this.state.user}`)})
         .catch((err)=> console.log(err))
 
     }

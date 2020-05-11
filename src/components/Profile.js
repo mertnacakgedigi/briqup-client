@@ -40,7 +40,7 @@ class Profile extends Component {
       </Card> 
 
       <OfferShow offers = {this.state.user.offers} />
-      <RequestShow requests = {this.state.user.requests} />
+      <RequestShow  {...this.props} requests = {this.state.user.requests} />
       
     </>
   
